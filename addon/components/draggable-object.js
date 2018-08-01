@@ -72,9 +72,6 @@ export default Component.extend({
 
     dataTransfer.setData('Text', id);
 
-    if (obj && typeof obj === 'object') {
-      set(obj, 'isDraggingObject', true);
-    }
     this.set('isDraggingObject', true);
     if (!this.get('dragCoordinator.enableSort') && this.get('dragCoordinator.sortComponentController')) {
       //disable drag if sorting is disabled this is not used for regular
@@ -103,9 +100,6 @@ export default Component.extend({
 
     let obj = this.get('content');
 
-    if (obj && typeof obj === 'object') {
-      set(obj, 'isDraggingObject', false);
-    }
     this.set('isDraggingObject', false);
     this.dragEndHook(event);
     this.get('dragCoordinator').dragEnded();

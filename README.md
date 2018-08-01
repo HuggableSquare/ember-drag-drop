@@ -67,7 +67,6 @@ The two things to provide to the component are:
   {{name}}
 {{/draggable-object}}
 ```
-At the start of the drag a property of isDraggingObject will be set to true on the content object and false on drag end.
 
 Optionally you can set actions on the component to get notified on drag start and end. The content value of the current object being dragged is sent as the parameter.
 
